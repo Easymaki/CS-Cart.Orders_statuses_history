@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>history_order</id>
+    <version>1.0</version>
+    <name>Order history</name>
+    <status>active</status>
+    <default_language>en</default_language>
+    <queries>
+        <item editions="ULTIMATE">
+            ALTER TABLE `?:orders`
+            ADD COLUMN `history` varchar(255) DEFAULT '';
+        </item>
+    </queries>
+</addon>
