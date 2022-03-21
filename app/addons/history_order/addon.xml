@@ -6,9 +6,16 @@
     <status>active</status>
     <default_language>en</default_language>
     <queries>
-        <item editions="ULTIMATE">
-            ALTER TABLE `?:orders`
-            ADD COLUMN `history` varchar(255) DEFAULT '';
+         <item>
+            CREATE TABLE `?:history_orders` (
+                `change_id` int(11) unsigned NOT NULL auto_increment,
+                `order_id` int(11) NOT NULL default '',
+                `user_id` int(11) NOT NULL default '',
+                `status_from` varchar(1) NOT NULL default '',
+                `status_to` varchar(1) NOT NULL default '',
+                `timestamp` int(11) unsigned NOT NULL default '0',
+                PRIMARY KEY  (`change_id`),
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
         </item>
     </queries>
 </addon>
