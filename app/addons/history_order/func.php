@@ -11,8 +11,10 @@ function fn_history_order_change_order_status($status_to, $status_from, $order_i
         'status_to' => $status_to,
         'timestamp' => $order_info['updated_at'],
     );
-
-    db_query('INSERT INTO ?:history_orders ?e', $order_data);
+    
+    if (!empty($order_data) {
+        db_query('INSERT INTO ?:history_orders ?e', $order_data);
+    }
 }
 
 function fn_history_order_get_order_info(&$order, $additional_data)
