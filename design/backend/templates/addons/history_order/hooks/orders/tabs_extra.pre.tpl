@@ -1,5 +1,5 @@
 {if !empty($order_info.history)}
-<h4 class="subheader">{__("history")}</h4>
+    <h4 class="subheader">{__("history")}</h4>
     <table class="table">
         <thead>
             <tr>
